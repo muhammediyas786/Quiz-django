@@ -1,0 +1,141 @@
+{% load static %}
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="{% static 'css/questions.css' %}" >
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <body style="background-color: #222222;font-family: 'Lato', sans-serif;">
+        <div class="container">
+                <div class="row"><br><br>
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div class="loader">
+                           
+        
+                            <div id="quiz">
+                                {% if question %}
+                                {% if answer is none %}
+                                {% for outputs in question %}
+                                <div class="question">
+                                    <h3><span class="label label-warning" id="qid">{{number}}</span>
+                                        <span id="question"> {{outputs.question}} ?</span>
+                                    </h3>
+                                </div>
+                                <ul>
+                                  <li>
+                                      <form method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" id="f-option" name="input" value="{{outputs.option_1}}">
+                                        <button  type="submit" class="element-animation">{{outputs.option_1}}</button>
+                                        
+                                        <div class="check">
+                                    </div>
+                                </form>
+                                  </li>
+                                  <li>
+                                      <form method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" id="f-option" name="input" value="{{outputs.option_2}}">
+                                        <button  type="submit" class="element-animation">{{outputs.option_2}}</button>
+                                        
+                                        <div class="check">
+                                    </div>
+                                </form>
+                            </li>
+                            <li>
+                                      <form method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" id="f-option" name="input" value="{{outputs.option_3}}">
+                                        <button  type="submit" class="element-animation">{{outputs.option_3}}</button>
+                                        
+                                        <div class="check">
+                                    </div>
+                                </form>
+                                  </li>
+                                  <li>
+                                      <form method="post">
+                                          {% csrf_token %}
+                                        <input type="hidden" id="f-option" name="input" value="{{outputs.option_4}}">
+                                        <button  type="submit" class="element-animation">{{outputs.option_4}}</button>
+                                        
+                                        <div class="check">
+                                        </div>
+                                    </form>
+                                </li>
+                                
+                                
+                            </ul>
+                            {% endfor %}
+                            {% else %}
+                            {% if input %}
+                            {% for outputs in question %}
+                            <div class="question">
+                                <h3><span class="label label-warning" id="qid">{{number}}</span>
+                                    <span id="question"> {{outputs.question}} ?</span>
+                                </h3>
+                            </div>
+                            {% endfor %}
+                            <ul>
+                                <li>
+                                    <label  style="color:red;" class="element-animation">{{input}}</label>
+                                    
+                                    <div style="border-color:red;" class="check">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label  style="color:green;" class="element-animation">{{answer}}</label>
+                                    
+                                    <div style="border-color:green;" class="check">
+                                    </div>
+                                </li>
+                                
+                                
+                            </ul>
+                            {% else %}
+                            {% for outputs in question %}
+                            <div class="question">
+                                <h3><span class="label label-warning" id="qid">{{number}}</span>
+                                    <span id="question"> {{outputs.question}} ?</span>
+                                </h3>
+                            </div>
+                            {% endfor %}
+                            <ul>
+                              <li>
+                                    <label  style="color:green;" class="element-animation">{{answer}}</label>
+                                    
+                                    <div style="border-color:green;" class="check">
+                                    </div>
+                              
+                                </li>
+                        
+                            
+                        </ul>
+                            {% endif %}
+                            {% endif %}
+                                {% else %}
+                                <div class="question">
+                                    <h3>
+                                        <span id="question">questions Finished. We will update questions soon !</span>
+                                    </h3>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                <a href="{% url 'home' %}" id="keys" class="forward">Back</a>
+                <form style="float:right;" method='post'>
+                    {% csrf_token %}
+                    <input type="hidden" name="number" value={{number}}>
+                    <button id="keys" class="submit " type="submit">Next</button>
+                </form>
+            </div>
+            <script>
+
+            </script>
+        <script src="{% static 'js/scripts.js' %}"></script>
+
+    </body>
+</html>

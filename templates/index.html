@@ -1,0 +1,171 @@
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>E Store - eCommerce HTML Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="eCommerce HTML Template Free Download" name="keywords">
+        <meta content="eCommerce HTML Template Free Download" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/slick/slick.css" rel="stylesheet">
+        <link href="lib/slick/slick-theme.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    </head>
+
+    <body style="    background-color: #222222;">
+       
+        
+        <!-- Bottom Bar Start -->
+        <div class="bottom-bar" style="background:#000000;">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <h3>Quiz App</h3>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Bar End -->       
+        
+        <!-- Main Slider Start -->
+        <div class="header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <nav class="navbar bg-dark">
+
+                            <ul class="navbar-nav" style="background:#000000;">
+                                {% for name in categories %}
+                                <li class="nav-item" style="border:none;">
+                                    <a class="nav-link" href="/questions/{{name.name}}/1">{{name.name}}</a>
+                                </li>
+                                {% endfor %}
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="header-slider normal-slider">
+                            <a href="https://github.com/muhammediyas786">
+                            <img style="width:100%;height:100%;" src="{% static 'images/Screenshot_20221101_073759.png' %}"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="header-img">
+                            <div class="img-item">
+                                <img src="{% static 'images/Screenshot_20221101_080240.png' %}" />
+                                <a class="img-text" href="https://www.linkedin.com/in/muhammed-iyas-13416a229/">
+                                    <p>Linked In</p>
+                                </a>
+                            </div>
+                            <div class="img-item">
+                                <img src="{% static 'images/Screenshot_20221101_075438.png' %}" />
+                                <a class="img-text" href="https://www.instagram.com/__iy_as__/">
+                                    <p style="color:white;">Instagram</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Slider End -->      
+        
+        <!-- Category Start-->
+        <div class="category">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="category-item ch-400">
+                            <img src="{% static 'images/Screenshot_20221101_083739.png' %}" />
+                            <a class="category-name" href="https://www.facebook.com/jack.iyas.14/">
+                                <p style="color:white;">Facebook</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="category-item ch-250">
+                            <img src="{% static 'images/Screenshot_20221101_082606.png' %}" />
+                            <a class="category-name" href="https://twitter.com/Muhammad_Iyas_A">
+                                <p style="color:white;">Twiter</p>
+                            </a>
+                        </div>
+                        <div class="category-item ch-150">
+                            <img src="{% static 'images/Screenshot_20221101_083453.png' %}" />
+                            <a class="category-name" href="https://chatwithdjango.herokuapp.com/">
+                                <p style="color:black;">Chatting App</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="category-item ch-150">
+                            <img src="{% static 'images/Screenshot_20221101_084050.png' %}" />
+                            <a class="category-name" href="https://firstprojectapp.herokuapp.com/">
+                                <p style="color:white;">E-commerce</p>
+                            </a>
+                        </div>
+                        <div class="category-item ch-250">
+                            <img src="{% static 'images/Screenshot_20221101_084557.png' %}" />
+                            <a class="category-name" href="https://eweb.pythonanywhere.com/">
+                                <p style="color:white;">Wallpaper App</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="category-item ch-400">
+                            <img src="{% static 'images/Screenshot_20221101_084931.png' %}" />
+                            <a class="category-name" href="http://muhammediyas.pythonanywhere.com/">
+                                <p style="color:white;">Personal Website</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Category End-->       
+        
+        
+        <!-- Footer Bottom Start -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 copyright">
+                        <p>Copyright &copy; <a href="http://muhammediyas.pythonanywhere.com/">MUHAMMED IYAS</a></p>
+                    </div>
+
+                    <div class="col-md-6 template-by">
+                        <p>Template By <a href="http://muhammediyas.pythonanywhere.com/">MUHAMMED IYAS</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom End -->       
+        
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+        
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
