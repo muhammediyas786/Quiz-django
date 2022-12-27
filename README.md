@@ -19,20 +19,20 @@ https://quizwithdjango.pythonanywhere.com/
 
 ## Home page
 
-![App Screenshot](https://github.com/muhammediyas786/Quiz-django/blob/master/screenshots/Screenshot_20221104_104217.png)
+![App Screenshot](https://dashing-pika-0fa706.netlify.app/screenshots/quiz-1.png)
 
 
 ## Questions page
 
-![App Screenshot](https://github.com/muhammediyas786/Quiz-django/blob/master/screenshots/Screenshot_20221104_105219.png)
+![App Screenshot](https://dashing-pika-0fa706.netlify.app/screenshots/quiz-2.png)
 
 
 ## If question answer correct page
 
-![App Screenshot](https://github.com/muhammediyas786/Quiz-django/blob/master/screenshots/Screenshot_20221104_105329.png)
+![App Screenshot](https://dashing-pika-0fa706.netlify.app/screenshots/quiz-4.png)
 
 
 ## If question answer icorrect page
 
-![App Screenshot](https://github.com/muhammediyas786/Quiz-django/blob/master/screenshots/Screenshot_20221104_105247.png)
+![App Screenshot](https://dashing-pika-0fa706.netlify.app/screenshots/quiz-3.png)
 
